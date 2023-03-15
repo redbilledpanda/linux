@@ -165,6 +165,20 @@ config LOCALVERSION_AUTO
 
 	  which is done within the script "scripts/setlocalversion".)
 
+config LLKD_OPTION1
+       bool "Test case for LLKD book/Ch 2: creating a new menu item in kernel config"
+       default n
+       help
+          This option is merely a dummy 'test'; it's simply to have readers of our book
+          - 'Linux Kernel Programming', Kaiwan NB, Packt - try out the creation of
+          a few menu items within the kernel config.
+
+          Try setting this option to 'Y' (true), save and exit, and see the effect this
+          has by doing:
+           grep "CONFIG_LLKD_OPTION1" .config
+
+          If unsure, say N
+
 config BUILD_SALT
        string "Build ID Salt"
        default ""
